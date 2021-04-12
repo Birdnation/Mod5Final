@@ -2,20 +2,20 @@
   <b-container>
     <Hero/>
     <Input/>
-    <List/>
+    <Lista/>
   </b-container>
 </template>
 
 <script>
 import Hero from '../components/Hero.vue'
 import Input from '../components/Input.vue'
-import List from '../components/List.vue'
+import Lista from '../components/List.vue'
 export default {
   setup() {
     
   },
   components: {
-    Hero, Input, List
+    Hero, Input, Lista
   }
 }
 </script>
