@@ -34,8 +34,8 @@ export default new Vuex.Store({
       state.products.splice(index, 1);
     },
     updatePaid(state, index) {
-      console.log(state.products[index])
       state.products[index].paid = !state.products[index].paid
+      console.log(index)
 
       if (state.products[index].paid) {
         state.pagado = state.pagado + parseInt(state.products[index].price);

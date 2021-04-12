@@ -5,7 +5,7 @@
                 <b-button size="sm" @click="deleteProduct(row.index)" class="btn btn-danger">X</b-button>
             </template>
             <template #cell(isPaid)="row">
-                <b-button size="sm" @click="updatePaid(row.index)" class="btn btn-success">X</b-button>
+                <b-button size="sm" @click="updatePaid(row.index)" class="btn" :class="{'btn-danger' : products[row.index].paid, 'btn-success': !products[row.index].paid}">X</b-button>
             </template>
         </b-table>
     </b-container>
@@ -25,7 +25,8 @@ export default {
                 key:'price', label:'Precio', sortable:false, thStyle:'width:20%'
             },{
                 key:'isPaid', label:'¿Pagado?', sortable:false, thStyle:'width:20%'
-            }]
+            }],
+            
         }},
     name: 'List',
     computed:{
