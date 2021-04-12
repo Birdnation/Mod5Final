@@ -1,5 +1,5 @@
 <template>
-    <b-container>
+    <b-container class="pt-5">
         <b-table hover :items="products" :fields="fields">
             <template #cell(deleteProducto)="row">
                 <b-button size="sm" @click="deleteProduct(row.index)" class="btn btn-danger">X</b-button>
@@ -20,9 +20,9 @@ export default {
             fields:[{
                 key:'deleteProducto', label:'Eliminar', sortable: false, thStyle:'width:10%'
             },{
-                key:'description', label:'Descripción', sortable: true, thStyle:'width:50%', class:'text-left'
+                key:'description', label:'Descripción', sortable: false, thStyle:'width:50%', class:'text-left'
             },{
-                key:'price', label:'Precio', sortable:true, thStyle:'width:20%'
+                key:'price', label:'Precio', sortable:false, thStyle:'width:20%'
             },{
                 key:'isPaid', label:'¿Pagado?', sortable:false, thStyle:'width:20%'
             }]

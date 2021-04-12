@@ -3,6 +3,7 @@
     <Hero/>
     <Input/>
     <Lista/>
+    <Footer/>
   </b-container>
 </template>
 
@@ -10,12 +11,13 @@
 import Hero from '../components/Hero.vue'
 import Input from '../components/Input.vue'
 import Lista from '../components/List.vue'
+import Footer from '../components/Footer.vue'
 export default {
   setup() {
     
   },
   components: {
-    Hero, Input, Lista
+    Hero, Input, Lista, Footer
   }
 }
 </script>
